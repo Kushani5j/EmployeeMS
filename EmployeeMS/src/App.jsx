@@ -1,3 +1,4 @@
+import React from "react";
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -8,6 +9,8 @@ import Profile from './Components/Profile'
 import Category from './Components/Category'
 import Employee from './Components/Employee'
 import AddCategory from './Components/AddCategory'
+import AddEmployee from './Components/AddEmployee';
+import EditEmployee from "./Components/EditEmployee";
 
 function App() {
   return (
@@ -20,6 +23,8 @@ function App() {
           <Route path='category' element={<Category />} />
           <Route path='profile' element={<Profile />} />
           <Route path='add_category' element={<AddCategory />} />
+          <Route path='add_employee' element={<AddEmployee />} />
+          <Route path='edit_employee/:id' element={<EditEmployee />} />
         </Route>
       </Routes>
     </BrowserRouter>
